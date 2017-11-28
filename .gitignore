@@ -1,0 +1,64 @@
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+
+# Editor Files #
+################
+*~
+*.swp
+
+# Gradle Files #
+################
+.gradle
+.gradletasknamecache
+.m2
+
+# Build output directies
+target/
+build/
+
+# IntelliJ specific files/directories
+out
+.idea
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+
+*.class
+logs
+
+# sbt
+.idea
+.idea_modules
+.classpath
+.project
+.settings
+RUNNING_PID
+releases
+
+
+# Scala build
+*.cache
+/.nb-gradle/private/
+.Rproj.user
+
+# R Studio
+.Rhistory
+
+metastore_db
+*.Rproj
+
+
+# node.js
+node_modules
+dist
+
+manifest.json
+/unpackage
