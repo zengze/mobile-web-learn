@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import { TabBar } from 'antd-mobile';
 
-export default class Home extends Component {
+import * as containers from '../containers/index.jsx';
+
+export default class Index extends Component {
 
   constructor(props) {
     super(props);
@@ -18,8 +20,7 @@ export default class Home extends Component {
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
-          barTintColor="white"
-        >
+          barTintColor="white">
           <TabBar.Item
             key="home"
             title="首页"
@@ -40,7 +41,7 @@ export default class Home extends Component {
               });
             }}
             >
-              我是首页
+              <containers.Home />
           </TabBar.Item>
           <TabBar.Item
             key="work"
@@ -62,7 +63,7 @@ export default class Home extends Component {
               });
             }}
             >
-              我是工作
+              <containers.Work />
           </TabBar.Item>
           <TabBar.Item
             key="mine"
@@ -84,7 +85,7 @@ export default class Home extends Component {
               });
             }}
             >
-              我是我的
+              <containers.Mine />
           </TabBar.Item>
         </TabBar>
       </div>

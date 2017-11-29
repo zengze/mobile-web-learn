@@ -24,8 +24,7 @@ module.exports = {
     new ExtractTextPlugin({ filename: 'common.css', allChunks: true })
   ],
   entry: {
-    home: './src/entry/home.jsx',
-    work: './src/entry/work.jsx'
+    index: './src/entry/index.jsx'
   },
   output: {
     path: path.join(__dirname, '/public/dist'),

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 
-import { TabBar } from 'antd-mobile';
+export class Work extends Component {
 
-export default class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
 
   render() {
 
