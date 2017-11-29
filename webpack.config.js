@@ -4,17 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const pxtorem = require('postcss-pxtorem');
 
-const Visualizer = require('webpack-visualizer-plugin'); // remove it in production environment.
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; // remove it in production environment.
-const otherPlugins = process.argv[1].indexOf('webpack-dev-server') >= 0 ? [] : [
-  new Visualizer(), // remove it in production environment.
-  new BundleAnalyzerPlugin({
-    defaultSizes: 'parsed',
-    // generateStatsFile: true,
-    statsOptions: { source: false }
-  }), // remove it in production environment.
-];
-
 const postcssOpts = {
   ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
   plugins: () => [
@@ -26,18 +15,21 @@ const postcssOpts = {
 };
 
 module.exports = {
-  devtool: 'source-map', // or 'inline-source-map'
-  devServer: {
-    disableHostCheck: true
+  plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      filename: 'common.js'
+    }),
+    new ExtractTextPlugin({ filename: 'common.css', allChunks: true })
+  ],
+  entry: {
+    home: './src/entry/home.jsx',
+    work: './src/entry/work.jsx'
   },
-
-  entry: { "index": path.resolve(__dirname, 'src/entry/index') },
-
   output: {
-    filename: '[name].js',
-    chunkFilename: '[id].chunk.js',
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/dist/'
+    path: path.join(__dirname, '/public/dist'),
+    filename: '[name].js'
   },
 
   resolve: {
@@ -92,15 +84,4 @@ module.exports = {
     "react": "React",
     "react-dom": "ReactDOM"
   },
-  plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    // new webpack.optimize.CommonsChunkPlugin('shared.js'),
-    new webpack.optimize.CommonsChunkPlugin({
-      // minChunks: 2,
-      name: 'shared',
-      filename: 'shared.js'
-    }),
-    new ExtractTextPlugin({ filename: '[name].css', allChunks: true }),
-    ...otherPlugins
-  ]
 }
