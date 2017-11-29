@@ -24,68 +24,80 @@ export default class Index extends Component {
           <TabBar.Item
             key="home"
             title="首页"
-            icon={<div style={{
-              width: '50px',
-              height: '50px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  50px 50px no-repeat' }}
-            />}
-            selectedIcon={<div style={{
-              width: '50px',
-              height: '50px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  50px 50px no-repeat' }}
-            />}
+            icon={
+              <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  50px 50px no-repeat' }}
+              />
+            }
+            selectedIcon={
+              <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  50px 50px no-repeat' }}
+              />
+            }
             selected={this.state.selectedTab === 'homeTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'homeTab',
               });
             }}
-            >
-              <containers.Home />
+          >
+            <containers.Home />
           </TabBar.Item>
           <TabBar.Item
             key="work"
             title="工作"
-            icon={<div style={{
-              width: '50px',
-              height: '50px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  50px 50px no-repeat' }}
-            />}
-            selectedIcon={<div style={{
-              width: '50px',
-              height: '50px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  50px 50px no-repeat' }}
-            />}
+            icon={
+              <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  50px 50px no-repeat' }}
+              />
+            }
+            selectedIcon={
+              <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  50px 50px no-repeat' }}
+              />
+            }
             selected={this.state.selectedTab === 'workTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'workTab',
               });
             }}
-            >
-              <containers.Work />
+          >
+            <containers.Work />
           </TabBar.Item>
           <TabBar.Item
             key="mine"
             title="我的"
-            icon={<div style={{
-              width: '50px',
-              height: '50px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  50px 50px no-repeat' }}
-            />}
-            selectedIcon={<div style={{
-              width: '50px',
-              height: '50px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  50px 50px no-repeat' }}
-            />}
+            icon={
+              <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  50px 50px no-repeat' }}
+              />
+            }
+            selectedIcon={
+              <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  50px 50px no-repeat' }}
+              />
+            }
             selected={this.state.selectedTab === 'mineTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'mineTab',
               });
             }}
-            >
-              <containers.Mine />
+          >
+            <containers.Mine />
           </TabBar.Item>
         </TabBar>
       </div>
