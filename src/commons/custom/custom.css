@@ -1,0 +1,16 @@
+
+.am-tab-bar-bar {
+  height: 1rem;
+}
+
+.am-tab-bar-bar .am-tab-bar-tab-title {
+  font-size: 0.2rem;
+}
+
+.am-tabs-pane-wrap {
+  /*overflow-y: hidden;*/
+}
+
+.am-grid .am-flexbox .am-flexbox-item .am-grid-item-content .am-grid-item-inner-content .am-grid-text {
+  font-size: 0.2rem;
+}

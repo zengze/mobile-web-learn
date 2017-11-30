@@ -16,7 +16,7 @@ export default class Index extends Component {
   render() {
 
     return (
-      <div>
+      <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -70,6 +70,7 @@ export default class Index extends Component {
                 selectedTab: 'workTab',
               });
             }}
+            badge={5}
           >
             <containers.Work />
           </TabBar.Item>
