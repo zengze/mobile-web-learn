@@ -17,11 +17,11 @@ const postcssOpts = {
 module.exports = {
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
-      filename: 'common.js'
-    }),
-    new ExtractTextPlugin({ filename: 'common.css', allChunks: true })
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'common',
+    //   filename: 'common.js'
+    // }),
+    new ExtractTextPlugin({ filename: '[name].css', allChunks: true })
   ],
   entry: {
     index: './src/entry/index.jsx'
