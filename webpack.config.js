@@ -24,7 +24,8 @@ module.exports = {
     new ExtractTextPlugin({ filename: '[name].css', allChunks: true })
   ],
   entry: {
-    index: './src/entry/index.jsx'
+    index: './src/entry/index.jsx',
+    'map-jian-ce-dian': './src/entry/map-jian-ce-dian.jsx'
   },
   output: {
     path: path.join(__dirname, '/public/dist'),
