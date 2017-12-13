@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Button, Toast } from 'antd-mobile';
+
 export class Home extends Component {
 
   constructor(props) {
@@ -14,6 +16,8 @@ export class Home extends Component {
     return (
       <div>
         我是首页
+        <Button type="primary"
+          onClick={() => Toast.info('This is a toast tips !!!', 1)}>primary</Button>
       </div>
     );
   }
