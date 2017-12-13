@@ -49,7 +49,7 @@ export class Work extends Component {
         <PullToRefresh
           ref={el => this.ptr = el}
           style={{
-            height: this.state.height,
+            height: this.state.height - 50,
             overflow: 'auto',
           }}
           indicator={this.state.down ? {} : { deactivate: '上拉可以刷新' }}
@@ -62,7 +62,7 @@ export class Work extends Component {
             }, 1000);
           }}
         >
-          <Grid data={gridData} columnNum={4} hasLine={false} />
+          <Grid data={gridData} columnNum={4}/>
           <List renderHeader={() => '我的工作'}>
             <Item extra={'extra content'}>
               工作1
