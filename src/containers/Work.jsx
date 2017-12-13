@@ -24,7 +24,6 @@ export class Work extends Component {
   }
 
   render() {
-    console.log(this.state.height);
 
     const gridData = [
       {

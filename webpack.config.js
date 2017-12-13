@@ -1,18 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const pxtorem = require('postcss-pxtorem');
-
-const postcssOpts = {
-  ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
-  plugins: () => [
-    autoprefixer({
-      browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8', 'iOS >= 8', 'Android >= 4'],
-    }),
-    pxtorem({ rootValue: 100, propWhiteList: [] })
-  ],
-};
 
 module.exports = {
   plugins: [
@@ -66,7 +54,7 @@ module.exports = {
         test: /\.less$/i, use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader', { loader: 'postcss-loader', options: postcssOpts }, 'less-loader'
+            'css-loader', 'less-loader'
           ]
         })
       },
@@ -74,7 +62,7 @@ module.exports = {
         test: /\.css$/i, use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader', { loader: 'postcss-loader', options: postcssOpts }
+            'css-loader'
           ]
         })
       }

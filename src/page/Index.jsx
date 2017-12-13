@@ -26,16 +26,16 @@ export default class Index extends Component {
             title="首页"
             icon={
               <div style={{
-                width: '50px',
-                height: '50px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  50px 50px no-repeat' }}
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
               />
             }
             selectedIcon={
               <div style={{
-                width: '50px',
-                height: '50px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  50px 50px no-repeat' }}
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
               />
             }
             selected={this.state.selectedTab === 'homeTab'}
@@ -52,16 +52,16 @@ export default class Index extends Component {
             title="工作"
             icon={
               <div style={{
-                width: '50px',
-                height: '50px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  50px 50px no-repeat' }}
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
               />
             }
             selectedIcon={
               <div style={{
-                width: '50px',
-                height: '50px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  50px 50px no-repeat' }}
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
               />
             }
             selected={this.state.selectedTab === 'workTab'}
@@ -79,16 +79,16 @@ export default class Index extends Component {
             title="我的"
             icon={
               <div style={{
-                width: '50px',
-                height: '50px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  50px 50px no-repeat' }}
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
               />
             }
             selectedIcon={
               <div style={{
-                width: '50px',
-                height: '50px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  50px 50px no-repeat' }}
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
               />
             }
             selected={this.state.selectedTab === 'mineTab'}
